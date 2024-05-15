@@ -1,0 +1,131 @@
+/* Sidebar.module.css */
+.sidebar {
+  width: 360px;
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  /* padding: 20px; */
+  background-color: #fff;
+  /* height: 100vh; */
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.filterTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.checkboxTitle {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.input {
+  height: 56px;
+  width: 300px;
+  padding: 0 18px 0 42px;
+  font-family: "Inter", sans-serif;
+  font-size: inherit;
+  color: inherit;
+  border-radius: 10px;
+  border: none;
+  background-color: #f7f7f7;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(16, 24, 40, 0.1);
+}
+
+.checkboxLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 56px;
+  padding: 0 60px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #E44848;
+  transition: background-color .3s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #d84343;
+}
+
+.inputBar {
+  position: relative;
+}
+
+.iconLocation {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  fill: transparent;
+  stroke: #101828;
+  transform: translateY(-50%);
+}
+
+.buttonWithCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.buttonWithCheckbox.active {
+  border-color: red;
+}
+
+.hiddenCheckbox {
+  display: none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}

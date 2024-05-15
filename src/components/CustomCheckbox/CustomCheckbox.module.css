@@ -1,0 +1,36 @@
+.checkboxLabel {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  min-width: 100px;
+  height: 95px;
+  font-weight: 500;
+  line-height: 125%;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color .3s;
+}
+
+.checkboxButton.active {
+  border-color: #e44848;
+}
+
+.iconFilled {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.checkbox {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.checkbox:checked ~ .checkboxLabel {
+  border-color: #e44848;
+}

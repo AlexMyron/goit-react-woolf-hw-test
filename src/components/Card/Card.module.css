@@ -1,0 +1,159 @@
+.card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  padding: 24px;
+}
+
+.image {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: fill .3s, stroke .3s;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.details {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ratingBar {
+  display: block;
+  border-bottom: 1px solid #101828;
+}
+
+.locationBar {
+  display: flex;
+  gap: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: transparent;
+  stroke: currentColor;
+}
+
+.iconFilled {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.iconLocation {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: transparent;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  height: 44px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 100px;
+  background-color: #f7f7f7;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.priceBar {
+  display: flex;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #d84343;
+}
+
+.iconHeart {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: #101828;
+}
+
+.iconHeartFav {
+  fill: #e44848;
+  stroke: #e44848;
+}
+
+.addButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.description {
+  display: -webkit-box;  
+  margin-bottom: 24px;
+  -webkit-line-clamp: 1;   
+  -webkit-box-orient: vertical;     
+  color: #475467;
+  overflow: hidden;
+}
