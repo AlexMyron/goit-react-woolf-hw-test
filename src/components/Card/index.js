@@ -7,14 +7,6 @@ import icons from '../../images/icons.svg';
 import ac from '../../images/ac.svg';
 import Button from 'components/Button';
 
-const galleryCardFeaturesList = [
-  { name: 'ac', iconName: 'AC' },
-  { name: 'automatic', iconName: 'Automatic' },
-  { name: 'kitchen', iconName: 'Kitchen' },
-  { name: 'TV', iconName: 'tv' },
-  { name: 'Shower/WC', iconName: 'shower' },
-];
-
 const Card = ({
   gallery,
   name,
