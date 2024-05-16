@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/goit-react-woolf-hw-test/static/css/main.f28489f6.css",
-    "main.js": "/goit-react-woolf-hw-test/static/js/main.1896965a.js",
+    "main.js": "/goit-react-woolf-hw-test/static/js/main.8c29bb03.js",
     "static/js/686.f9103b16.chunk.js": "/goit-react-woolf-hw-test/static/js/686.f9103b16.chunk.js",
     "static/css/699.f3fce80c.chunk.css": "/goit-react-woolf-hw-test/static/css/699.f3fce80c.chunk.css",
-    "static/js/699.9d45532a.chunk.js": "/goit-react-woolf-hw-test/static/js/699.9d45532a.chunk.js",
+    "static/js/699.2fefd5b2.chunk.js": "/goit-react-woolf-hw-test/static/js/699.2fefd5b2.chunk.js",
     "static/css/394.874f400e.chunk.css": "/goit-react-woolf-hw-test/static/css/394.874f400e.chunk.css",
-    "static/js/394.33aece33.chunk.js": "/goit-react-woolf-hw-test/static/js/394.33aece33.chunk.js",
+    "static/js/394.9e08dc4e.chunk.js": "/goit-react-woolf-hw-test/static/js/394.9e08dc4e.chunk.js",
     "static/media/icons.svg": "/goit-react-woolf-hw-test/static/media/icons.23499dad60900fa173fdafe284654358.svg",
     "static/media/ac.svg": "/goit-react-woolf-hw-test/static/media/ac.8c4fa90691be77f67845b470271c8593.svg",
     "index.html": "/goit-react-woolf-hw-test/index.html",
     "main.f28489f6.css.map": "/goit-react-woolf-hw-test/static/css/main.f28489f6.css.map",
-    "main.1896965a.js.map": "/goit-react-woolf-hw-test/static/js/main.1896965a.js.map",
+    "main.8c29bb03.js.map": "/goit-react-woolf-hw-test/static/js/main.8c29bb03.js.map",
     "686.f9103b16.chunk.js.map": "/goit-react-woolf-hw-test/static/js/686.f9103b16.chunk.js.map",
     "699.f3fce80c.chunk.css.map": "/goit-react-woolf-hw-test/static/css/699.f3fce80c.chunk.css.map",
-    "699.9d45532a.chunk.js.map": "/goit-react-woolf-hw-test/static/js/699.9d45532a.chunk.js.map",
+    "699.2fefd5b2.chunk.js.map": "/goit-react-woolf-hw-test/static/js/699.2fefd5b2.chunk.js.map",
     "394.874f400e.chunk.css.map": "/goit-react-woolf-hw-test/static/css/394.874f400e.chunk.css.map",
-    "394.33aece33.chunk.js.map": "/goit-react-woolf-hw-test/static/js/394.33aece33.chunk.js.map"
+    "394.9e08dc4e.chunk.js.map": "/goit-react-woolf-hw-test/static/js/394.9e08dc4e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f28489f6.css",
-    "static/js/main.1896965a.js"
+    "static/js/main.8c29bb03.js"
   ]
 }
