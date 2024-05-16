@@ -1,26 +1,32 @@
 import { Route, Routes } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { fetchList } from '../redux/operations';
+import SharedLayout from './SharedLayout';
 
-import CatalogPage from 'pages/CatalogPage';
-import FavoritesPage from 'pages/FavoritesPage';
-import HomePage from 'pages/HomePage';
+import { fetchList } from '../redux/operations';
+import SharedCatalogLayout from './SharedCatalogLayout';
 
 export const App = () => {
+  const HomePage = lazy(() => import('../pages/HomePage'));
+  const CatalogPage = lazy(() => import('../pages/CatalogPage'));
+  const FavoritesPage = lazy(() => import('../pages/FavoritesPage'));
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchList());
-    
   }, [dispatch]);
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="*" element={<HomePage />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
+          <Route element={<SharedCatalogLayout />}>
+            <Route path="catalog" element={<CatalogPage />} />
+            <Route path="favorites" element={<FavoritesPage />} />
+          </Route>
+          <Route path="*" element={<HomePage />} />
+        </Route>
       </Routes>
     </div>
   );

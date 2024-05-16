@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import advertsList from '../helpers/cardsList.json';
 import axios from 'axios';
 
 axios.defaults.baseURL =
@@ -28,16 +27,3 @@ export const toggleFavorites = createAsyncThunk(
     }
   }
 );
-
-// export const postList = createAsyncThunk(
-//   'advert/fetchList',
-//   async (_, thunkAPI) => {
-//     try {
-//       const { data } = await axios.post('/', );
-//       console.log(data);
-//       return data;
-//     } catch (err) {
-//       return thunkAPI.rejectWithValue(err.message);
-//     }
-//   }
-// );

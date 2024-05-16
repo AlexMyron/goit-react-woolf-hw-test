@@ -1,13 +1,6 @@
-import { useState } from 'react';
 import styles from './CustomCheckbox.module.css';
 
 const CustomCheckbox = ({ label, iconName }) => {
-  const [checked, setChecked] = useState(false);
-
-  const toggleCheckbox = () => {
-    setChecked(!checked);
-  };
-
   return (
     <div>
       <input

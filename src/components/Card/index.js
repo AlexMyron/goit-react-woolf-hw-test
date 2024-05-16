@@ -5,6 +5,7 @@ import { selectFavorites } from '../../redux/selectors';
 import styles from './Card.module.css';
 import icons from '../../images/icons.svg';
 import ac from '../../images/ac.svg';
+import Button from 'components/Button';
 
 const galleryCardFeaturesList = [
   { name: 'ac', iconName: 'AC' },
@@ -45,7 +46,7 @@ const Card = ({
   return (
     <li className={styles.card}>
       <div className={styles.imageBar}>
-        <img src={gallery[0]} alt={name} className={styles.image} />
+        <img src={gallery[0]} alt={name} className={styles.image} loading='lazy' />
       </div>
       <div className={styles.content}>
         <div className={styles.header}>
@@ -117,7 +118,7 @@ const Card = ({
           )}
         </div>
         <div className={styles.footer}>
-          <button className={styles.button}>Show more</button>
+          <Button label="Show more" />
         </div>
       </div>
     </li>

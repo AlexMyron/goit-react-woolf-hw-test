@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 56px;
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #E44848;
+  transition: background-color .3s;
+}
+
+.button.sidebar {
+  padding: 0 60px;
+}
+
+.button.loadMore {
+  padding: 0 32px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  background-color: #fff;
+  color: #101828;
+  transition: border-color .3s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #d84343;
+}
+
+.button.loadMore:hover,
+.button.loadMore:focus {
+  border-color: #e44848;
+  background-color: #fff;
+}
