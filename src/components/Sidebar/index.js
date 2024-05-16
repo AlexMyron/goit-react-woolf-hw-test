@@ -5,7 +5,7 @@ import CustomRadioButton from 'components/CustomRadioButton';
 
 import { selectAdverts } from '../../redux/selectors';
 import { filterAdvertsList } from '../../redux/advertsSlice';
-import { formAdvertList, galleryFeaturesList } from 'helpers/constants';
+import { FORM_FEATURES_LIST, GALLERY_FEATURES_LIST } from 'helpers/constants';
 import { filterCardsList } from 'helpers/actions';
 
 import styles from './Sidebar.module.css';
@@ -48,7 +48,7 @@ const Sidebar = () => {
           <h2 className={styles.filterTitle}>Filters</h2>
           <h3 className={styles.checkboxTitle}>Vehicle Equipment</h3>
           <div className={styles.checkboxGroup}>
-            {galleryFeaturesList.map(({ name, iconName }) => (
+            {GALLERY_FEATURES_LIST.map(({ name, iconName }) => (
               <CustomCheckbox key={name} label={name} iconName={iconName} />
             ))}
           </div>
@@ -56,7 +56,7 @@ const Sidebar = () => {
         <div className={styles.formSection}>
           <h3 className={styles.checkboxTitle}>Vehicle Type</h3>
           <div className={styles.checkboxGroup}>
-            {formAdvertList.map(({ name, iconName }) => (
+            {FORM_FEATURES_LIST.map(({ name, iconName }) => (
               <CustomRadioButton
                 key={name}
                 label={name}

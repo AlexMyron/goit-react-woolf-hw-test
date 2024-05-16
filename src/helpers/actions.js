@@ -1,3 +1,24 @@
+import { PER_PAGE } from './constants';
+
+const hasValidDetails = (details, keys) => {
+  return keys.every(key => {
+    const lowerCaseKey = key.toLowerCase();
+    return (
+      lowerCaseKey in details &&
+      details[lowerCaseKey] !== null &&
+      details[lowerCaseKey] !== undefined &&
+      details[lowerCaseKey] !== 0
+    );
+  });
+};
+
+const toLowerCaseKeys = obj => {
+  return Object.keys(obj).reduce((acc, key) => {
+    acc[key.toLowerCase()] = obj[key];
+    return acc;
+  }, {});
+};
+
 export const filterCardsList = ({ target, list }) => {
   const fd = new FormData(target);
   const locationQuery = fd.get('location')?.toLowerCase() || '';
@@ -15,25 +36,6 @@ export const filterCardsList = ({ target, list }) => {
     filterKeys.push(selectedRadio.value.toLowerCase());
   }
 
-  const toLowerCaseKeys = obj => {
-    return Object.keys(obj).reduce((acc, key) => {
-      acc[key.toLowerCase()] = obj[key];
-      return acc;
-    }, {});
-  };
-
-  const hasValidDetails = (details, keys) => {
-    return keys.every(key => {
-      const lowerCaseKey = key.toLowerCase();
-      return (
-        lowerCaseKey in details &&
-        details[lowerCaseKey] !== null &&
-        details[lowerCaseKey] !== undefined &&
-        details[lowerCaseKey] !== 0
-      );
-    });
-  };
-
   return list.filter(item => {
     const lowerCaseDetails = toLowerCaseKeys(item.details);
     lowerCaseDetails[item.form.toLowerCase()] = 1;
@@ -47,4 +49,13 @@ export const filterCardsList = ({ target, list }) => {
 
     return isCardPassed && matchesLocation;
   });
+};
+
+export const paginate = (currentPage, list) => {
+  const end = currentPage * PER_PAGE;
+
+  return {
+    cardsPayload: [...list].splice(0, end),
+    isButtonVisible: list.length > end,
+  };
 };

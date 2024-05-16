@@ -1,25 +1,28 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { selectfilteredAdverts } from '../../redux/selectors';
 
 import CardsList from 'components/CartsList';
 
+import { paginate } from 'helpers/actions';
 import styles from './CatalogPage.module.css';
 import Button from 'components/Button';
-import { increasePageNumber } from '../../redux/paginationSlice';
 
 const CatalogPage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const cardsList = useSelector(selectfilteredAdverts);
-  const dispatch = useDispatch();
 
-  const handleClick = () => {
-    dispatch(increasePageNumber());
-  };
+  const { cardsPayload, isButtonVisible } = paginate(currentPage, cardsList);
+  const handleClick = () => setCurrentPage(prev => prev + 1);
+
   return (
     <div className={styles.section}>
       <div className={styles.list}>
-        {cardsList && <CardsList cards={cardsList} />}
+        {cardsList && <CardsList cards={cardsPayload} />}
       </div>
-      <Button label="Load more" location="loadMore" onClick={handleClick} />
+      {isButtonVisible && (
+        <Button label="Load more" location="loadMore" onClick={handleClick} />
+      )}
     </div>
   );
 };

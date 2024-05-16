@@ -15,15 +15,3 @@ export const fetchList = createAsyncThunk(
     }
   }
 );
-
-export const toggleFavorites = createAsyncThunk(
-  'advert/toggleFavorites',
-  async (_, thunkAPI) => {
-    try {
-      const { data } = await axios.get('/');
-      return data;
-    } catch (err) {
-      return thunkAPI.rejectWithValue(err.message);
-    }
-  }
-);
