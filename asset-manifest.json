@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/goit-react-woolf-hw-test/static/css/main.f28489f6.css",
-    "main.js": "/goit-react-woolf-hw-test/static/js/main.8c29bb03.js",
-    "static/js/686.f9103b16.chunk.js": "/goit-react-woolf-hw-test/static/js/686.f9103b16.chunk.js",
-    "static/css/699.f3fce80c.chunk.css": "/goit-react-woolf-hw-test/static/css/699.f3fce80c.chunk.css",
-    "static/js/699.2fefd5b2.chunk.js": "/goit-react-woolf-hw-test/static/js/699.2fefd5b2.chunk.js",
-    "static/css/394.874f400e.chunk.css": "/goit-react-woolf-hw-test/static/css/394.874f400e.chunk.css",
-    "static/js/394.9e08dc4e.chunk.js": "/goit-react-woolf-hw-test/static/js/394.9e08dc4e.chunk.js",
-    "static/media/icons.svg": "/goit-react-woolf-hw-test/static/media/icons.23499dad60900fa173fdafe284654358.svg",
+    "main.css": "/goit-react-woolf-hw-test/static/css/main.b1264840.css",
+    "main.js": "/goit-react-woolf-hw-test/static/js/main.bc487857.js",
+    "static/js/686.19693d5f.chunk.js": "/goit-react-woolf-hw-test/static/js/686.19693d5f.chunk.js",
+    "static/css/206.3b3d12df.chunk.css": "/goit-react-woolf-hw-test/static/css/206.3b3d12df.chunk.css",
+    "static/js/206.eea54785.chunk.js": "/goit-react-woolf-hw-test/static/js/206.eea54785.chunk.js",
+    "static/css/303.8a96869b.chunk.css": "/goit-react-woolf-hw-test/static/css/303.8a96869b.chunk.css",
+    "static/js/303.3b797fcd.chunk.js": "/goit-react-woolf-hw-test/static/js/303.3b797fcd.chunk.js",
+    "static/css/44.6310eaba.chunk.css": "/goit-react-woolf-hw-test/static/css/44.6310eaba.chunk.css",
+    "static/js/44.5063a6ca.chunk.js": "/goit-react-woolf-hw-test/static/js/44.5063a6ca.chunk.js",
+    "static/js/801.294e16b8.chunk.js": "/goit-react-woolf-hw-test/static/js/801.294e16b8.chunk.js",
+    "static/media/icons.svg": "/goit-react-woolf-hw-test/static/media/icons.6f31795d77f3a707d628158bd5b7e295.svg",
     "static/media/ac.svg": "/goit-react-woolf-hw-test/static/media/ac.8c4fa90691be77f67845b470271c8593.svg",
     "index.html": "/goit-react-woolf-hw-test/index.html",
-    "main.f28489f6.css.map": "/goit-react-woolf-hw-test/static/css/main.f28489f6.css.map",
-    "main.8c29bb03.js.map": "/goit-react-woolf-hw-test/static/js/main.8c29bb03.js.map",
-    "686.f9103b16.chunk.js.map": "/goit-react-woolf-hw-test/static/js/686.f9103b16.chunk.js.map",
-    "699.f3fce80c.chunk.css.map": "/goit-react-woolf-hw-test/static/css/699.f3fce80c.chunk.css.map",
-    "699.2fefd5b2.chunk.js.map": "/goit-react-woolf-hw-test/static/js/699.2fefd5b2.chunk.js.map",
-    "394.874f400e.chunk.css.map": "/goit-react-woolf-hw-test/static/css/394.874f400e.chunk.css.map",
-    "394.9e08dc4e.chunk.js.map": "/goit-react-woolf-hw-test/static/js/394.9e08dc4e.chunk.js.map"
+    "main.b1264840.css.map": "/goit-react-woolf-hw-test/static/css/main.b1264840.css.map",
+    "main.bc487857.js.map": "/goit-react-woolf-hw-test/static/js/main.bc487857.js.map",
+    "686.19693d5f.chunk.js.map": "/goit-react-woolf-hw-test/static/js/686.19693d5f.chunk.js.map",
+    "206.3b3d12df.chunk.css.map": "/goit-react-woolf-hw-test/static/css/206.3b3d12df.chunk.css.map",
+    "206.eea54785.chunk.js.map": "/goit-react-woolf-hw-test/static/js/206.eea54785.chunk.js.map",
+    "303.8a96869b.chunk.css.map": "/goit-react-woolf-hw-test/static/css/303.8a96869b.chunk.css.map",
+    "303.3b797fcd.chunk.js.map": "/goit-react-woolf-hw-test/static/js/303.3b797fcd.chunk.js.map",
+    "44.6310eaba.chunk.css.map": "/goit-react-woolf-hw-test/static/css/44.6310eaba.chunk.css.map",
+    "44.5063a6ca.chunk.js.map": "/goit-react-woolf-hw-test/static/js/44.5063a6ca.chunk.js.map",
+    "801.294e16b8.chunk.js.map": "/goit-react-woolf-hw-test/static/js/801.294e16b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f28489f6.css",
-    "static/js/main.8c29bb03.js"
+    "static/css/main.b1264840.css",
+    "static/js/main.bc487857.js"
   ]
 }
