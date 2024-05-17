@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectfilteredAdverts } from '../../redux/selectors';
 
-import CardsList from 'components/CartsList';
+import CardsList from 'components/CardsList';
 
 import { paginate } from 'helpers/actions';
 import styles from './CatalogPage.module.css';

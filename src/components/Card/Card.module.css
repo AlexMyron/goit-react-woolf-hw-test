@@ -1,13 +1,14 @@
 .card {
   display: flex;
+  gap: 24px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   padding: 24px;
 }
 
-.image {
+.thumb {
   width: 290px;
   height: 310px;
   border-radius: 10px;
@@ -15,9 +16,16 @@
   transition: fill .3s, stroke .3s;
 }
 
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .content {
-  padding: 16px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -161,7 +169,8 @@
   display: -webkit-box;  
   margin-bottom: 24px;
   -webkit-line-clamp: 1;   
-  -webkit-box-orient: vertical;     
+  -webkit-box-orient: vertical;  
+  text-overflow: ellipsis;   
   color: #475467;
   overflow: hidden;
 }

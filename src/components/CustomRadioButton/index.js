@@ -1,4 +1,5 @@
 import styles from './CustomRadioButton.module.css';
+import icons from '../../images/icons.svg';
 
 const CustomRadioButton = ({ label, iconName, buttonName }) => {
   return (
@@ -9,11 +10,12 @@ const CustomRadioButton = ({ label, iconName, buttonName }) => {
         name={buttonName}
         value={iconName}
         className={`${styles.checkbox} ${styles.visuallyHidden}`}
-        />
-        {/* defaultChecked={iconName === 'panelTruck'} */}
+      />
       <label key={iconName} className={styles.checkboxLabel} htmlFor={iconName}>
-        <img src={`../../images/icons/${iconName}.svg`} alt={label} />
-        {label}
+        <svg className={styles.icon}>
+          <use xlinkHref={`${icons}#icon-${iconName}`}></use>
+        </svg>
+        <span className={styles.name}>{label}</span>
       </label>
     </div>
   );

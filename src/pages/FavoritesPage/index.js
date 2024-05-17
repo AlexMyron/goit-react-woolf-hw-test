@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectFavorites, selectfilteredAdverts } from '../../redux/selectors';
 
-import CardsList from 'components/CartsList';
+import CardsList from 'components/CardsList';
 import Button from 'components/Button';
 
 import styles from './FavoritesPage.module.css';
@@ -23,12 +23,11 @@ const FavoritesPage = () => {
   );
   const handleClick = () => setCurrentPage(prev => prev + 1);
 
-  console.log('currentPage', currentPage);
-
   return (
     <div className={styles.section}>
       <div className={styles.section}>
         {favoritesList && <CardsList cards={cardsPayload} />}
+        {!favoritesList.length && <p className={styles.empty}>No items selected</p>}
       </div>
       {isButtonVisible && (
         <Button label="Load more" location="loadMore" onClick={handleClick} />

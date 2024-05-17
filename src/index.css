@@ -25,3 +25,15 @@ p, h1, h2, h3 {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.react-datepicker__input-container input {
+  width: 405px;
+}
+
+
+

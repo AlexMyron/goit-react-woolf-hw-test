@@ -5,7 +5,8 @@ import { selectFavorites } from '../../redux/selectors';
 import styles from './Card.module.css';
 import icons from '../../images/icons.svg';
 import ac from '../../images/ac.svg';
-import Button from 'components/Button';
+import Button from '../Button';
+import { formatPrice } from 'helpers/actions';
 
 const Card = ({
   gallery,
@@ -26,6 +27,7 @@ const Card = ({
   description,
   details,
   _id,
+  handleShowMore,
 }) => {
   const favorites = useSelector(selectFavorites);
   const dispatch = useDispatch();
@@ -37,15 +39,20 @@ const Card = ({
 
   return (
     <li className={styles.card}>
-      <div className={styles.imageBar}>
-        <img src={gallery[0]} alt={name} className={styles.image} loading='lazy' />
+      <div className={styles.thumb}>
+        <img
+          src={gallery[0]}
+          alt={name}
+          className={styles.image}
+          loading="lazy"
+        />
       </div>
       <div className={styles.content}>
         <div className={styles.header}>
           <h2 className={styles.title}>{name}</h2>
           <div className={styles.price}>
             <div className={styles.priceBar}>
-              €<span>{price}</span>
+              {formatPrice(price)}
             </div>
             <button className={styles.addButton} onClick={handleFavorites}>
               <svg className={buttonClass}>
@@ -110,7 +117,7 @@ const Card = ({
           )}
         </div>
         <div className={styles.footer}>
-          <Button label="Show more" />
+          <Button label="Show more" onClick={() => handleShowMore(_id)} />
         </div>
       </div>
     </li>

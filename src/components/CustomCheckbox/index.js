@@ -1,16 +1,19 @@
 import styles from './CustomCheckbox.module.css';
+import icons from '../../images/icons.svg';
 
 const CustomCheckbox = ({ label, iconName }) => {
   return (
-    <div>
+    <div className={styles.inputBar}>
       <input
         id={iconName}
         type="checkbox"
         name={iconName}
-        className={styles.checkbox}
+        className={`${styles.checkbox} ${styles.visuallyHidden}`}
       />
       <label key={iconName} className={styles.checkboxLabel} htmlFor={iconName}>
-        <img src={`../../images/icons/${iconName}.svg`} alt={label} />
+        <svg className={styles.icon}>
+          <use xlinkHref={`${icons}#icon-${iconName}`}></use>
+        </svg>
         {label}
       </label>
     </div>
