@@ -17,8 +17,8 @@ const NoItems = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className={styles.section}
       transition={{ duration: 1 }}
+      className={styles.section}
     >
       <motion.img
         initial={{ scale: 1.2, opacity: 0 }}
@@ -30,12 +30,17 @@ const NoItems = () => {
         width="268"
         height="268"
       />
-      <div className={styles.noItemsText}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className={styles.noItemsText}
+      >
         <h2 className={styles.title}>Oooopss, nothing here yet...</h2>
         <p className={styles.message}>
           Please proceed by clicking the button to add your favorite campervans.
         </p>
-      </div>
+      </motion.div>
       <Button label="Click me" onClick={handleClick} />
     </motion.div>
   );
