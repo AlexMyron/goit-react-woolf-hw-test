@@ -12,9 +12,19 @@ const NoItems = () => {
   const handleClick = () => {
     navigate('/catalog');
   };
+
   return (
     <div className={styles.section}>
-      <motion.img initial={{scale: 1.2}} animate={{scale: 1}} transition={{duration: 0.5}} className={styles.image} src={no_cars} alt="Road Sign" />
+      <motion.img
+        initial={{ scale: 1.2, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className={styles.image}
+        src={no_cars}
+        alt="Road Sign"
+        width="268"
+        height="268"
+      />
       <div className={styles.noItemsText}>
         <h2 className={styles.title}>Oooopss, nothing here yet...</h2>
         <p>Please add your favorite vans by clicking the button</p>

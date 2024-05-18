@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { selectFavorites, selectfilteredAdverts } from '../../redux/selectors';
+import { selectFavorites, selectfilteredAdverts, selectAdvertsLoading } from '../../redux/selectors';
 
 import CardsList from 'components/CardsList';
 import Button from 'components/UI/Button';
@@ -16,6 +16,7 @@ const FavoritesPage = () => {
   const favoritesIDs = useSelector(selectFavorites);
   const { currentPage, increasePage } = useContext(PaginationCtx);
   const galleryRef = useRef();
+  const isLoading = useSelector(selectAdvertsLoading);
 
   const favoritesList = cardsList.filter(({ _id }) => {
     return favoritesIDs.includes(_id);
@@ -34,7 +35,7 @@ const FavoritesPage = () => {
     <div className={styles.section}>
       <div ref={galleryRef}>
         {favoritesList && <CardsList cards={cardsPayload} />}
-        {!favoritesList.length && <NoItems />}
+        {!favoritesList.length && !isLoading && <NoItems />}
       </div>
       {isButtonVisible && (
         <Button label="Load more" location="loadMore" onClick={handleClick} />
