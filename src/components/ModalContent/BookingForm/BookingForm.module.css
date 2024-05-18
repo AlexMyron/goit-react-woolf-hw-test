@@ -17,12 +17,6 @@
   background-color: #fff;
 }
 
-/* .form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-} */
-
 .bookingForm input,
 .bookingForm textarea {
   display: flex;
@@ -52,4 +46,10 @@
 .slogan {
   display: block;
   margin-bottom: 24px;
+}
+
+.error {
+  display: block;
+  color: #ff5a5f;
+  margin-bottom: 8px;
 }

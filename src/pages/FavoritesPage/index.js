@@ -1,17 +1,21 @@
-import { useState } from 'react';
+import { useContext, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { selectFavorites, selectfilteredAdverts } from '../../redux/selectors';
 
 import CardsList from 'components/CardsList';
-import Button from 'components/Button';
+import Button from 'components/UI/Button';
+import NoItems from 'components/NoItems';
 
-import styles from './FavoritesPage.module.css';
-import { paginate } from 'helpers/actions';
+import { paginate, scrollSmoothlyTo } from 'services/helpers';
+import PaginationCtx from 'ctx/store';
+
+import styles from './FavoritesPage.module.css'
 
 const FavoritesPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
   const cardsList = useSelector(selectfilteredAdverts);
   const favoritesIDs = useSelector(selectFavorites);
+  const { currentPage, increasePage } = useContext(PaginationCtx);
+  const galleryRef = useRef();
 
   const favoritesList = cardsList.filter(({ _id }) => {
     return favoritesIDs.includes(_id);
@@ -21,13 +25,16 @@ const FavoritesPage = () => {
     currentPage,
     favoritesList
   );
-  const handleClick = () => setCurrentPage(prev => prev + 1);
+  const handleClick = () => {
+    increasePage();
+    scrollSmoothlyTo(galleryRef);
+  };
 
   return (
     <div className={styles.section}>
-      <div className={styles.section}>
+      <div ref={galleryRef}>
         {favoritesList && <CardsList cards={cardsPayload} />}
-        {!favoritesList.length && <p className={styles.empty}>No items selected</p>}
+        {!favoritesList.length && <NoItems />}
       </div>
       {isButtonVisible && (
         <Button label="Load more" location="loadMore" onClick={handleClick} />

@@ -1,27 +1,37 @@
-import { useState } from 'react';
+import { useContext, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { selectfilteredAdverts } from '../../redux/selectors';
 
 import CardsList from 'components/CardsList';
 
-import { paginate } from 'helpers/actions';
+import { paginate, scrollSmoothlyTo } from 'services/helpers';
 import styles from './CatalogPage.module.css';
-import Button from 'components/Button';
+import Button from 'components/UI/Button';
+import PaginationCtx from 'ctx/store';
 
 const CatalogPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
   const cardsList = useSelector(selectfilteredAdverts);
+  const { currentPage, increasePage } = useContext(PaginationCtx);
+  const galleryRef = useRef();
 
   const { cardsPayload, isButtonVisible } = paginate(currentPage, cardsList);
-  const handleClick = () => setCurrentPage(prev => prev + 1);
+
+  const handleLoadMore = () => {
+    increasePage();
+    scrollSmoothlyTo(galleryRef);
+  };
 
   return (
     <div className={styles.section}>
-      <div className={styles.list}>
+      <div className={styles.list} ref={galleryRef}>
         {cardsList && <CardsList cards={cardsPayload} />}
       </div>
       {isButtonVisible && (
-        <Button label="Load more" location="loadMore" onClick={handleClick} />
+        <Button
+          label="Load more"
+          location="loadMore"
+          onClick={handleLoadMore}
+        />
       )}
     </div>
   );

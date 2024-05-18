@@ -2,10 +2,10 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import SharedLayout from './SharedLayout';
+import SharedLayout from './Layouts/SharedLayout';
 
 import { fetchList } from '../redux/operations';
-import SharedCatalogLayout from './SharedCatalogLayout';
+import SharedCatalogLayout from './Layouts/SharedCatalogLayout';
 
 export const App = () => {
   const HomePage = lazy(() => import('../pages/HomePage'));

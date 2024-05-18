@@ -35,5 +35,10 @@ img {
   width: 405px;
 }
 
+.Toastify {
+  position: fixed;
+  z-index: 100;
+}
+
 
 
