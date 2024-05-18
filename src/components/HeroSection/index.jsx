@@ -31,7 +31,8 @@ const HeroSection = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         className={styles.heroImage}
-      />
+        width="557"  
+        height="356"    />
     </section>
   );
 };

@@ -27,7 +27,7 @@ const NoItems = () => {
       />
       <div className={styles.noItemsText}>
         <h2 className={styles.title}>Oooopss, nothing here yet...</h2>
-        <p>Please add your favorite vans by clicking the button</p>
+        <p className={styles.message}>Please proceed by clicking the button to add your favorite campervans.</p>
       </div>
       <Button label="Click me" onClick={handleClick} />
     </div>

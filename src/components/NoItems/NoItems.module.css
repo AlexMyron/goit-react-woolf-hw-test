@@ -19,3 +19,8 @@
 .image {
   width: 30%;
 }
+
+.message {
+  padding-top: 10px;
+  width: 426px;
+}
