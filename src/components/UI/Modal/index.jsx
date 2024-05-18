@@ -9,7 +9,7 @@ import {
 import { createPortal } from 'react-dom';
 import styles from './Modal.module.css';
 import icons from '../../../images/icons.svg';
-import { useLockBodyScroll } from '@uidotdev/usehooks';
+// import { useLockBodyScroll } from '@uidotdev/usehooks';
 
 const Modal = forwardRef(function Modal({ children }, ref) {
   const modalRef = useRef();

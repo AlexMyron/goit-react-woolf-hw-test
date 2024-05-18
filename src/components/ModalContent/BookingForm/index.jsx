@@ -1,9 +1,11 @@
-import { useCallback, useState } from 'react';
-
+import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Button from 'components/UI/Button';
-import DateInput from 'components/UI/DatePicker';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 import styles from './BookingForm.module.css';
+import icons from '../../../images/icons.svg';
 import { validateBookingForm } from 'services/helpers';
 import { postBooking } from 'services/api';
 import { INIT_FORM_STATE } from 'services/constants';
@@ -11,42 +13,51 @@ import { INIT_FORM_STATE } from 'services/constants';
 const BookingForm = () => {
   const [formValues, setFormValues] = useState(INIT_FORM_STATE);
   const [formErrors, setFormErrors] = useState({});
+  const [startDate, setStartDate] = useState(null);
+  const [shake, setShake] = useState(false);
+  const formRef = useRef();
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setFormErrors(prev => ({ ...prev, [name]: '' }));
-
+    setFormErrors((prev) => ({ ...prev, [name]: '' }));
     setFormValues({
       ...formValues,
       [name]: value,
     });
   };
 
-  const handleDateInput = useCallback(
-    date => {
-      if (!date) return;
+  const handleDateChange = (date) => {
+    setStartDate(date);
+    setFormErrors((prev) => ({ ...prev, date: '' }));
+    setFormValues({
+      ...formValues,
+      date,
+    });
+  };
 
-      setFormErrors(prev => ({ ...prev, date: '' }));
-
-      setFormValues({
-        ...formValues,
-        date,
-      });
-    },
-    [formValues]
-  );
-
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const errors = validateBookingForm(formValues);
+
+    const errors = validateBookingForm({ ...formValues, date: startDate });
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
-      postBooking(formValues);
+      postBooking({ ...formValues, date: startDate });
       setFormValues(INIT_FORM_STATE);
+      setStartDate(null);
+    } else {
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
     }
   };
+
+  const shakeAnimation = shake
+    ? {
+        x: [-5, 5, -5, 5, -5, 5, 0],
+        transition: { duration: 0.4 },
+      }
+    : {};
 
   return (
     <div className={styles.bookingForm}>
@@ -54,7 +65,7 @@ const BookingForm = () => {
       <span className={styles.slogan}>
         Stay connected! We are always ready to help you.
       </span>
-      <form className={styles.form}>
+      <form className={styles.form} ref={formRef}>
         <input
           type="text"
           name="name"
@@ -63,7 +74,13 @@ const BookingForm = () => {
           onChange={handleChange}
         />
         {formErrors.name && (
-          <span className={styles.error}>{formErrors.name}</span>
+          <motion.span
+            className={styles.error}
+            initial={{ x: 0 }}
+            animate={shakeAnimation}
+          >
+            {formErrors.name}
+          </motion.span>
         )}
         <input
           type="email"
@@ -73,11 +90,33 @@ const BookingForm = () => {
           onChange={handleChange}
         />
         {formErrors.email && (
-          <span className={styles.error}>{formErrors.email}</span>
+          <motion.span
+            className={styles.error}
+            initial={{ x: 0 }}
+            animate={shakeAnimation}
+          >
+            {formErrors.email}
+          </motion.span>
         )}
-        <DateInput handleDateInput={handleDateInput} />
+        <div className={styles.dateBar}>
+          <DatePicker
+            selected={startDate}
+            name="date"
+            onChange={handleDateChange}
+            placeholderText={'Booking date'}
+          />
+          <svg className={styles.icon}>
+            <use xlinkHref={`${icons}#icon-calendar`}></use>
+          </svg>
+        </div>
         {formErrors.date && (
-          <span className={styles.error}>{formErrors.date}</span>
+          <motion.span
+            className={styles.error}
+            initial={{ x: 0 }}
+            animate={shakeAnimation}
+          >
+            {formErrors.date}
+          </motion.span>
         )}
         <textarea
           name="comment"
@@ -86,6 +125,15 @@ const BookingForm = () => {
           onChange={handleChange}
           value={formValues.comment}
         ></textarea>
+        {formErrors.comment && (
+          <motion.span
+            className={styles.error}
+            initial={{ x: 0 }}
+            animate={shakeAnimation}
+          >
+            {formErrors.comment}
+          </motion.span>
+        )}
         <Button
           label="Send"
           type="submit"

@@ -53,3 +53,18 @@
   color: #ff5a5f;
   margin-bottom: 8px;
 }
+
+.dateBar {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  fill: transparent;
+  stroke: currentColor;
+  pointer-events: none;
+}
