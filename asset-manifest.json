@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/goit-react-woolf-hw-test/static/css/main.76232eae.css",
-    "main.js": "/goit-react-woolf-hw-test/static/js/main.27c85624.js",
-    "static/css/268.c76ac542.chunk.css": "/goit-react-woolf-hw-test/static/css/268.c76ac542.chunk.css",
-    "static/js/268.caaaf741.chunk.js": "/goit-react-woolf-hw-test/static/js/268.caaaf741.chunk.js",
+    "main.js": "/goit-react-woolf-hw-test/static/js/main.4ab81241.js",
+    "static/css/268.9309be9a.chunk.css": "/goit-react-woolf-hw-test/static/css/268.9309be9a.chunk.css",
+    "static/js/268.49df7f10.chunk.js": "/goit-react-woolf-hw-test/static/js/268.49df7f10.chunk.js",
     "static/css/282.cd7ed42d.chunk.css": "/goit-react-woolf-hw-test/static/css/282.cd7ed42d.chunk.css",
     "static/js/282.95cc9675.chunk.js": "/goit-react-woolf-hw-test/static/js/282.95cc9675.chunk.js",
-    "static/css/857.14f28fd6.chunk.css": "/goit-react-woolf-hw-test/static/css/857.14f28fd6.chunk.css",
-    "static/js/857.edd50543.chunk.js": "/goit-react-woolf-hw-test/static/js/857.edd50543.chunk.js",
+    "static/css/857.71112428.chunk.css": "/goit-react-woolf-hw-test/static/css/857.71112428.chunk.css",
+    "static/js/857.28f8ce4a.chunk.js": "/goit-react-woolf-hw-test/static/js/857.28f8ce4a.chunk.js",
     "static/css/44.6310eaba.chunk.css": "/goit-react-woolf-hw-test/static/css/44.6310eaba.chunk.css",
     "static/js/44.7332c9f3.chunk.js": "/goit-react-woolf-hw-test/static/js/44.7332c9f3.chunk.js",
     "static/js/524.f152e456.chunk.js": "/goit-react-woolf-hw-test/static/js/524.f152e456.chunk.js",
@@ -17,19 +17,19 @@
     "static/media/ac.svg": "/goit-react-woolf-hw-test/static/media/ac.8c4fa90691be77f67845b470271c8593.svg",
     "index.html": "/goit-react-woolf-hw-test/index.html",
     "main.76232eae.css.map": "/goit-react-woolf-hw-test/static/css/main.76232eae.css.map",
-    "main.27c85624.js.map": "/goit-react-woolf-hw-test/static/js/main.27c85624.js.map",
-    "268.c76ac542.chunk.css.map": "/goit-react-woolf-hw-test/static/css/268.c76ac542.chunk.css.map",
-    "268.caaaf741.chunk.js.map": "/goit-react-woolf-hw-test/static/js/268.caaaf741.chunk.js.map",
+    "main.4ab81241.js.map": "/goit-react-woolf-hw-test/static/js/main.4ab81241.js.map",
+    "268.9309be9a.chunk.css.map": "/goit-react-woolf-hw-test/static/css/268.9309be9a.chunk.css.map",
+    "268.49df7f10.chunk.js.map": "/goit-react-woolf-hw-test/static/js/268.49df7f10.chunk.js.map",
     "282.cd7ed42d.chunk.css.map": "/goit-react-woolf-hw-test/static/css/282.cd7ed42d.chunk.css.map",
     "282.95cc9675.chunk.js.map": "/goit-react-woolf-hw-test/static/js/282.95cc9675.chunk.js.map",
-    "857.14f28fd6.chunk.css.map": "/goit-react-woolf-hw-test/static/css/857.14f28fd6.chunk.css.map",
-    "857.edd50543.chunk.js.map": "/goit-react-woolf-hw-test/static/js/857.edd50543.chunk.js.map",
+    "857.71112428.chunk.css.map": "/goit-react-woolf-hw-test/static/css/857.71112428.chunk.css.map",
+    "857.28f8ce4a.chunk.js.map": "/goit-react-woolf-hw-test/static/js/857.28f8ce4a.chunk.js.map",
     "44.6310eaba.chunk.css.map": "/goit-react-woolf-hw-test/static/css/44.6310eaba.chunk.css.map",
     "44.7332c9f3.chunk.js.map": "/goit-react-woolf-hw-test/static/js/44.7332c9f3.chunk.js.map",
     "524.f152e456.chunk.js.map": "/goit-react-woolf-hw-test/static/js/524.f152e456.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76232eae.css",
-    "static/js/main.27c85624.js"
+    "static/js/main.4ab81241.js"
   ]
 }
