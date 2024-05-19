@@ -5,6 +5,7 @@ import Modal from 'components/UI/Modal';
 import DetailedCard from 'components/ModalContent/DetailedCard';
 
 import { motion } from 'framer-motion';
+import ScrollToTopButton from '../UI/ScrollToTopButton';
 
 const CardsList = ({ cards }) => {
   const [cardId, setCardId] = useState(null);
@@ -36,6 +37,7 @@ const CardsList = ({ cards }) => {
           />
         )}
       </Modal>
+      <ScrollToTopButton />
     </motion.ul>
   );
 };

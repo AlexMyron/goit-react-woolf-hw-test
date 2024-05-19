@@ -7,14 +7,14 @@ import Button from 'components/UI/Button';
 import NoItems from 'components/NoItems';
 
 import { paginate, scrollSmoothlyTo } from 'services/helpers';
-import PaginationCtx from 'ctx/store';
+import AppCtx from 'ctx/store';
 
 import styles from './FavoritesPage.module.css'
 
 const FavoritesPage = () => {
   const cardsList = useSelector(selectfilteredAdverts);
   const favoritesIDs = useSelector(selectFavorites);
-  const { currentPage, increasePage } = useContext(PaginationCtx);
+  const { currentPage, increasePage } = useContext(AppCtx);
   const galleryRef = useRef();
   const isLoading = useSelector(selectAdvertsLoading);
 

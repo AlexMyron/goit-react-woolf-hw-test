@@ -14,12 +14,12 @@ import { filterCardsList } from 'services/helpers';
 import styles from './Sidebar.module.css';
 import icons from '../../images/icons.svg';
 import Button from 'components/UI/Button';
-import PaginationCtx from 'ctx/store';
+import AppCtx from 'ctx/store';
 
 const Sidebar = () => {
   const advertsList = useSelector(selectAdverts);
   const dispatch = useDispatch();
-  const { resetPage } = useContext(PaginationCtx);
+  const { resetPage } = useContext(AppCtx);
 
   const handleSubmit = e => {
     e.preventDefault();

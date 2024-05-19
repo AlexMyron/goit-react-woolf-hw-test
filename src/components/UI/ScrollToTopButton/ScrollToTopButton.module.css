@@ -1,0 +1,24 @@
+.button {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  background-color: #fff;
+  color: #fff;
+  border: 2px solid #E44848;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: #E44848;
+}

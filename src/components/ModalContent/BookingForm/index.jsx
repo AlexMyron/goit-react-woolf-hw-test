@@ -17,26 +17,26 @@ const BookingForm = () => {
   const [shake, setShake] = useState(false);
   const formRef = useRef();
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
 
-    setFormErrors((prev) => ({ ...prev, [name]: '' }));
+    setFormErrors(prev => ({ ...prev, [name]: '' }));
     setFormValues({
       ...formValues,
       [name]: value,
     });
   };
 
-  const handleDateChange = (date) => {
+  const handleDateChange = date => {
     setStartDate(date);
-    setFormErrors((prev) => ({ ...prev, date: '' }));
+    setFormErrors(prev => ({ ...prev, date: '' }));
     setFormValues({
       ...formValues,
       date,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     const errors = validateBookingForm({ ...formValues, date: startDate });

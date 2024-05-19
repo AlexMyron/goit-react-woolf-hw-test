@@ -1,13 +1,16 @@
 import { createContext, useState } from 'react';
 
-const PaginationCtx = createContext({
+const AppCtx = createContext({
+  isModalShown: false,
+  toggleModal: () => {},
   currentPage: 1,
   increasePage: () => {},
   resetPage: () => {},
 });
 
-export const PaginationProvider = ({ children }) => {
+export const AppCtxProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isModalShown, setIsModalShown] = useState(false);
 
   const increasePage = () => {
     setCurrentPage(prevPage => prevPage + 1);
@@ -17,11 +20,15 @@ export const PaginationProvider = ({ children }) => {
     setCurrentPage(1);
   };
 
+  const toggleModal = () => {
+    setIsModalShown(prev => !prev)
+  }
+
   return (
-    <PaginationCtx.Provider value={{ currentPage, increasePage, resetPage }}>
+    <AppCtx.Provider value={{ currentPage, increasePage, resetPage, isModalShown, toggleModal }}>
       {children}
-    </PaginationCtx.Provider>
+    </AppCtx.Provider>
   );
 };
 
-export default PaginationCtx;
+export default AppCtx;

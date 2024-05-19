@@ -7,11 +7,11 @@ import CardsList from 'components/CardsList';
 import { paginate, scrollSmoothlyTo } from 'services/helpers';
 import styles from './CatalogPage.module.css';
 import Button from 'components/UI/Button';
-import PaginationCtx from 'ctx/store';
+import AppCtx from 'ctx/store';
 
 const CatalogPage = () => {
   const cardsList = useSelector(selectfilteredAdverts);
-  const { currentPage, increasePage } = useContext(PaginationCtx);
+  const { currentPage, increasePage } = useContext(AppCtx);
   const galleryRef = useRef();
 
   const { cardsPayload, isButtonVisible } = paginate(currentPage, cardsList);
