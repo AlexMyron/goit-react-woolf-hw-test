@@ -39,6 +39,10 @@
   border-color: #e44848;
 }
 
+.checkbox:checked ~ .checkboxLabel:focus {
+  outline: 2px solid #e44848;
+}
+
 .name {
   display: flex;
   justify-content: center;
