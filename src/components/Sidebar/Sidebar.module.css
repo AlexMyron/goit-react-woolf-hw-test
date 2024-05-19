@@ -44,8 +44,14 @@
   font-size: inherit;
   color: inherit;
   border-radius: 10px;
-  border: none;
-  background-color: #f7f7f7;
+  border: 2px solid transparent;
+  background-color: #F7F7F7;
+  transition: border-color .3s ease;
+}
+
+.input:focus {
+  border: 2px solid #d84343;
+  outline: none;
 }
 
 .checkboxGroup {
