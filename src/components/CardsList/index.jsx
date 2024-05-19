@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+
 import Card from 'components/UI/Card';
 import Modal from 'components/UI/Modal';
 import DetailedCard from 'components/ModalContent/DetailedCard';
@@ -8,7 +9,6 @@ import { motion } from 'framer-motion';
 const CardsList = ({ cards }) => {
   const [cardId, setCardId] = useState(null);
   const [isDescriptionHidden, setIsDescriptionHidden] = useState(true);
-
   const modalRef = useRef();
 
   const handleShowMore = id => {
