@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-campervans-rent/static/css/main.76232eae.css",
+    "main.css": "/react-campervans-rent/static/css/main.d4b27e2f.css",
     "main.js": "/react-campervans-rent/static/js/main.d79e1c8a.js",
     "static/css/268.9309be9a.chunk.css": "/react-campervans-rent/static/css/268.9309be9a.chunk.css",
     "static/js/268.548ece22.chunk.js": "/react-campervans-rent/static/js/268.548ece22.chunk.js",
@@ -16,7 +16,7 @@
     "static/media/no_cars.webp": "/react-campervans-rent/static/media/no_cars.3eca096e6920c10b7863.webp",
     "static/media/ac.svg": "/react-campervans-rent/static/media/ac.8c4fa90691be77f67845b470271c8593.svg",
     "index.html": "/react-campervans-rent/index.html",
-    "main.76232eae.css.map": "/react-campervans-rent/static/css/main.76232eae.css.map",
+    "main.d4b27e2f.css.map": "/react-campervans-rent/static/css/main.d4b27e2f.css.map",
     "main.d79e1c8a.js.map": "/react-campervans-rent/static/js/main.d79e1c8a.js.map",
     "268.9309be9a.chunk.css.map": "/react-campervans-rent/static/css/268.9309be9a.chunk.css.map",
     "268.548ece22.chunk.js.map": "/react-campervans-rent/static/js/268.548ece22.chunk.js.map",
@@ -29,7 +29,7 @@
     "735.1c7fee6e.chunk.js.map": "/react-campervans-rent/static/js/735.1c7fee6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76232eae.css",
+    "static/css/main.d4b27e2f.css",
     "static/js/main.d79e1c8a.js"
   ]
 }
