@@ -12,7 +12,6 @@ const CustomCheckbox = ({ label, iconName }) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       inputRef.current.click();
-      console.log(e.key);
     }
   };
 
